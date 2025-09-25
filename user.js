@@ -1,35 +1,35 @@
 // =======================================================
-// Firefox optimointiasetukset (vanhemmille koneille / Ubuntu)
+// Firefox optimization settings (for older laptops / Ubuntu)
 // Antti86 user.js
 // =======================================================
 
-// Istunnon tallennus harvemmin (vähemmän levykuormaa)
+// Save session less frequently (reduces disk I/O on HDDs)
 user_pref("browser.sessionstore.interval", 300000); // 5 min
 user_pref("browser.sessionstore.interval.idle", 900000); // 15 min
 
-// HTTP-yhteyksien rajoittaminen (vähemmän prosessikuormaa)
+// Limit the number of concurrent HTTP connections (lighter CPU/network load)
 user_pref("network.http.max-connections", 200);
 
-// Estä sivujen esilataus (vähemmän turhaa liikennettä)
+// Disable page prefetching (reduces unnecessary traffic)
 user_pref("network.prefetch-next", false);
 
-// Poista välilehtien ja käyttöliittymän animaatiot
+// Disable tab and UI animations
 user_pref("browser.tabs.animate", false);
 user_pref("toolkit.cosmeticAnimations.enabled", false);
 
-// Poista smooth scrolling
+// Disable smooth scrolling
 user_pref("general.smoothScroll", false);
 
-// Ota käyttöön seurannan estäminen
+// Enable built-in tracking protection
 user_pref("privacy.trackingprotection.enabled", true);
 
-// Poista Pocket jos et käytä
+// Disable Pocket integration (if not used)
 user_pref("extensions.pocket.enabled", false);
 
-// Estä media-autoplay
+// Prevent autoplay of media
 user_pref("media.autoplay.default", 1);
 
-// Poista telemetria ja datan keruu
+// Disable telemetry and data collection
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.unified", false);
